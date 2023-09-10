@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo44.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm Kannan Khosla </h1>
+            <p style="color: white; font-weight: bold;">Data-Scientist / Software Developer</p>
+
+            
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/img.JPG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello! I'm a passionate computer science student currently pursuing my studies at the University of Alberta, while originally hailing from India. I'm on an exciting journey to explore the world of technology and software development. My primary interests lie in the realms of Python, machine learning, data science, and the associated tools such as Pandas, NumPy, and SQL. I'm also well-versed in Android development, Web development using technologies like Java, C, React, and JavaScript.</p>
+                <br>
+                <p>As I embark on my academic journey, I'm actively seeking internship opportunities that will allow me to apply my skills in real-world scenarios, further expanding my knowledge and contributing to innovative projects. I'm enthusiastic about tackling challenging problems and collaborating with like-minded individuals to create impactful solutions.</p>
+                <br>
+                <p>When I'm not coding or exploring the latest developments in the tech world, you might find me experimenting with new recipes, enjoying a good book, or taking a break to explore the beautiful landscapes of Alberta. Feel free to connect with me and let's discuss how I can contribute to your next exciting project!</p>
+
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Courses')">Courses </p>
+                    <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                    
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Data Science</span><br>Data Analysis and Modeling</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building Android/iOS Apps</li>
+                        <li><span>SQL</span><br>Database Management</li>
+                        <li><span>Python</span><br>Scripting and Data Analysis</li>
+                        <li><span>JavaScript</span><br>Front-end and Back-end Scripting</li>
+                        <li><span>Java</span><br>Application Development</li>
+                        <li><span>C</span><br>System Programming</li>
+                        <li><span>RISC-V Architecture</span><br>Processor Design and Development</li>
+                    </ul>
+                    
+                </div>
+                <div class="tab-contents" id="Courses">
+                    <ul> 
+                        
+                        <li><span>CMPUT 466 </span><br>Intermediate Machine Learning</li>
+                        <li><span>CMPUT 469 </span><br>Artificial Intelligence Capstone</li>
+                        <li><span>CMPUT 401 </span><br>Software Process and Product Management</li>
+                        <li><span>CMPUT 404 </span><br>Web Applications and Architecture</li>
+                        <li><span>CMPUT 455 </span><br>Search, Knowledge and Simulation</li>
+                        <li><span>CMPUT 301 </span><br>Introduction to Software Engineering</li>
+                        <li><span>CMPUT 340</span><br>Introduction to Numerical Methods.</li>
+                        <li><span>CMPUT 366</span><br>Search and Planning in Artificial Intelligence .</li>
+                        <li><span>CMPUT 365</span><br>Introduction to Reinforcement Learning.</li>
+                        <li><span>CMPUT 291 </span><br>Introduction to File and Database Management</li>
+                        <li><span>CMPUT 229 </span><br>Computer Organization and Architecture </li>
+                        <li><span>CMPUT 272 </span><br>Formal Systems and Logic in Computing Science</li>
+                        <li><span>CMPUT 204 </span><br> Algorithms design and analysis</li>
+                        
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="certifications">
+                    <ul>
+                        <li><span>2023</span><br>Machine Learning A-Z: AI, python & R +ChatGPT from Udemy</li>
+                        <li><span>2023</span><br>Introduction to Product Management from Udemy</li>
+                        <li><span>2022</span><br>Python 3 Programming Specialization from Udemy</li>
+                        <li><span>2021</span><br>Python Data Structures by University of Michigan on Coursera</li>
+                        <li><span>2021</span><br>Programming in C# Certification from Udemy</li>
+                        
+                        
+                        
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024</span><br>Bachelors of Science Specialization in Computer Science from Univeristy of Alberta</li>
+                        <li><span>2020</span><br>High School from Spring Dale Senior School Amritsar.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/BARQR.png">
+                <div class="layer">
+                    <h3>BARQR</h3>
+                    <p>Android App that scans QR code and give points randomly.Collect points by scanning QR codes from the map and compete with your friends around the globe.</p>
+                    <a href="https://github.com/Kannan-Khosla/BARQR"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.png">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
+                    <a href="https://github.com/Kannan-Khosla/MongoDB-python-project"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> kannan1@ualberta.ca</p>
+                <p><i class="fas fa-phone-square-alt"></i> +1 825-343-2408</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/kannan_khosla/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/kannan-khosla-4b8168222/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images/my_cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Kannan Khosla. Made wtih <i class="fas fa-heart"></a></p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '< https://script.google.com/macros/s/AKfycbw4NaWacAjgoAJQsa9psuccj0KbLBH0-qVEInSFWZNFpUEVieMSm0wsBsDWD5mBwdVB3Q/exec >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
