@@ -16,7 +16,7 @@
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
+                <!-- <li><a href="#services">Services</a></li> -->
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class="fas fa-times" onclick="closemenu()"></i>
@@ -36,7 +36,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/img.JPG">
+                <img src="images/newpro.jpeg">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -110,38 +110,70 @@
 </div>
 
 <!-- ----------portfolio------------ -->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Portfolio</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/BARQR.png">
-                <div class="layer">
-                    <h3>BARQR</h3>
-                    <p>Android App that scans QR code and give points randomly.Collect points by scanning QR codes from the map and compete with your friends around the globe.</p>
-                    <a href="https://github.com/Kannan-Khosla/BARQR"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work2.png">
-                <div class="layer">
-                    <h3>Music App</h3>
-                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
-                    <a href="https://github.com/Kannan-Khosla/MongoDB-python-project"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-3.png">
-                <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
+<body>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Description</th>
+                        <th>GitHub Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <td>BARQR</td>
+                        <td>An innovative Android application engineered to effortlessly scan QR codes, dispensing randomized points, and stimulating global competitiveness as users collect points by scanning QR codes displayed on an interactive map. This dynamic app offers an engaging and interactive experience, encouraging users to interact with their friends and competitors worldwide while exploring various geographical locations.</td>
+                        <td><a href="https://github.com/Kannan-Khosla/BARQR" target="_blank"><i class="fas fa-external-link-alt"></i> GitHub</a></td>
+                    </tr>
+                    
+                        <td>MongoMovieManager </td>
+                        <td>Python-based movie database management program utilizing MongoDB, offering extensive search capabilities, genre-based movie retrieval, and cast/crew information lookup. The program facilitates data entry, cast/crew management, and efficient database interaction for streamlined movie data handling.</td>
+                        <td><a href="https://github.com/Kannan-Khosla/MongoDB-python-project" target="_blank"><i class="fas fa-external-link-alt"></i> GitHub</a></td>
+                    </tr>
+                    
+                        <td>Whatsapp Chat Analyser</td>
+                        <td>WhatsApp chat analysis, extracting message statistics and sentiment insights to improve group communication and user engagement. Enhanced understanding of chat dynamics and communication strategies.</td>
+                        <td><a href="https://github.com/Kannan-Khosla/WhatsappChatAnalyser" target="_blank"><i class="fas fa-external-link-alt"></i> GitHub</a></td>
+
+                    </tr>
+                </tr>
+                    
+                <td>Email Spam Recogniser</td>
+                <td>Created an Email Spam Recognizer App proficient in distinguishing between spam and legitimate (ham) emails, enhancing email management and user productivity..</td>
+                <td><a href="https://github.com/Kannan-Khosla/email_spam_classifier" target="_blank"><i class="fas fa-external-link-alt"></i> GitHub</a></td>
+                
+            </tr>
+            </tr>
+                        
+            <td>Movie Recommender System </td>
+            <td>Designed and implemented a Movie Recommender System employing collaborative filtering and content-based techniques, providing personalized movie suggestions for enhanced user entertainment experiences.</td>
+            <td><a href="https://github.com/Kannan-Khosla/movie_recommender" target="_blank"><i class="fas fa-external-link-alt"></i> GitHub</a></td>
+            
+        </tr>
+                </tbody>
+            </table>
         </div>
-        <a href="#" class="btn">See more</a>
     </div>
-</div>
+
+    <script>
+        // JavaScript to make table rows clickable
+        const rows = document.querySelectorAll(".clickable");
+
+        rows.forEach((row) => {
+            row.addEventListener("click", () => {
+                const url = row.getAttribute("data-url");
+                if (url) {
+                    window.open(url, "_blank");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
 <!-- ----------contact------------- -->
 <div id="contact">
     <div class="container">
@@ -205,22 +237,36 @@
 
 </script>
 <script>
-    const scriptURL = '< https://script.google.com/macros/s/AKfycbw4NaWacAjgoAJQsa9psuccj0KbLBH0-qVEInSFWZNFpUEVieMSm0wsBsDWD5mBwdVB3Q/exec >' // add your own app script link here
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
+    const form = document.forms['submit-to-formspree'];
+    const msg = document.getElementById("msg");
+
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
+    e.preventDefault();
+    
+    // Replace 'YOUR_FORMSPREE_ENDPOINT' with your actual Formspree endpoint
+    const formspreeEndpoint = 'https://formspree.io/f/moqokkdw';
+
+    fetch(formspreeEndpoint, {
+        method: 'POST',
+        headers: {
+        'Accept': 'application/json'
+        },
+        body: new FormData(form)
     })
+    .then(response => {
+        if (response.ok) {
+        msg.innerHTML = "Message sent successfully";
+        setTimeout(function(){
+            msg.innerHTML = "";
+        }, 5000);
+        form.reset();
+        } else {
+        msg.innerHTML = "Error sending message";
+        }
+    })
+    .catch(error => console.error('Error!', error.message));
+    });
+
   </script>
 </body>
 </html>
