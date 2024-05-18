@@ -31,6 +31,8 @@
         </div>
     </div>
 </div>
+
+
 <!-- -----------about---------- -->
 <div id="about">
     <div class="container">
@@ -46,14 +48,21 @@
                 <br>
                 <p>When I'm not coding or exploring the latest developments in the tech world, you might find me experimenting with new recipes, enjoying a good book, or taking a break to explore the beautiful landscapes of Alberta. Feel free to connect with me and let's discuss how I can contribute to your next exciting project!</p>
 
-
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('Courses')">Courses </p>
+                    <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Courses')">Courses</p>
                     <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
-                    
                 </div>
-                <div class="tab-contents active-tab" id="skills">
+                
+                <div class="tab-contents active-tab" id="Education">
+                    <ul>
+                        <li><span>2024</span><br>Bachelors of Science Specialization in Computer Science from University of Alberta</li>
+                        <li><span>2020</span><br>High School from Spring Dale Senior School Amritsar.</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="skills">
                     <ul>
                         <li><span>Data Science</span><br>Data Analysis and Modeling</li>
                         <li><span>Web Development</span><br>Web App Development</li>
@@ -65,49 +74,59 @@
                         <li><span>C</span><br>System Programming</li>
                         <li><span>RISC-V Architecture</span><br>Processor Design and Development</li>
                     </ul>
-                    
                 </div>
+                
                 <div class="tab-contents" id="Courses">
-                    <ul> 
-                        
-                        <li><span>CMPUT 466 </span><br>Intermediate Machine Learning</li>
-                        <li><span>CMPUT 469 </span><br>Artificial Intelligence Capstone</li>
-                        <li><span>CMPUT 401 </span><br>Software Process and Product Management</li>
-                        <li><span>CMPUT 404 </span><br>Web Applications and Architecture</li>
-                        <li><span>CMPUT 455 </span><br>Search, Knowledge and Simulation</li>
-                        <li><span>CMPUT 301 </span><br>Introduction to Software Engineering</li>
-                        <li><span>CMPUT 340</span><br>Introduction to Numerical Methods.</li>
-                        <li><span>CMPUT 366</span><br>Search and Planning in Artificial Intelligence .</li>
-                        <li><span>CMPUT 365</span><br>Introduction to Reinforcement Learning.</li>
-                        <li><span>CMPUT 291 </span><br>Introduction to File and Database Management</li>
-                        <li><span>CMPUT 229 </span><br>Computer Organization and Architecture </li>
-                        <li><span>CMPUT 272 </span><br>Formal Systems and Logic in Computing Science</li>
-                        <li><span>CMPUT 204 </span><br> Algorithms design and analysis</li>
-                        
-
+                    <ul>
+                        <li><span>CMPUT 466</span><br>Intermediate Machine Learning</li>
+                        <li><span>CMPUT 469</span><br>Artificial Intelligence Capstone</li>
+                        <li><span>CMPUT 401</span><br>Software Process and Product Management</li>
+                        <li><span>CMPUT 404</span><br>Web Applications and Architecture</li>
+                        <li><span>CMPUT 455</span><br>Search, Knowledge and Simulation</li>
+                        <li><span>CMPUT 301</span><br>Introduction to Software Engineering</li>
+                        <li><span>CMPUT 340</span><br>Introduction to Numerical Methods</li>
+                        <li><span>CMPUT 366</span><br>Search and Planning in Artificial Intelligence</li>
+                        <li><span>CMPUT 365</span><br>Introduction to Reinforcement Learning</li>
+                        <li><span>CMPUT 291</span><br>Introduction to File and Database Management</li>
+                        <li><span>CMPUT 229</span><br>Computer Organization and Architecture</li>
+                        <li><span>CMPUT 272</span><br>Formal Systems and Logic in Computing Science</li>
+                        <li><span>CMPUT 204</span><br>Algorithms Design and Analysis</li>
                     </ul>
                 </div>
+                
                 <div class="tab-contents" id="certifications">
                     <ul>
-                        <li><span>2023</span><br>Machine Learning A-Z: AI, python & R +ChatGPT from Udemy</li>
+                        <li><span>2023</span><br>Machine Learning A-Z: AI, Python & R + ChatGPT from Udemy</li>
+                        <li><span>2023</span><br>Fundamentals of Reinforcement Learning from Coursera</li>
+                        <li><span>2023</span><br>Sample Based Learning Methods for Reinforcement Learning from Coursera</li>
+                        <li><span>2023</span><br>Prediction and Control with Function Approximation from Coursera</li>
                         <li><span>2023</span><br>Introduction to Product Management from Udemy</li>
                         <li><span>2022</span><br>Python 3 Programming Specialization from Udemy</li>
                         <li><span>2021</span><br>Python Data Structures by University of Michigan on Coursera</li>
                         <li><span>2021</span><br>Programming in C# Certification from Udemy</li>
-                        
-                        
-                        
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2024</span><br>Bachelors of Science Specialization in Computer Science from Univeristy of Alberta</li>
-                        <li><span>2020</span><br>High School from Spring Dale Senior School Amritsar.</li>
-                        
                     </ul>
                 </div>
+                
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function opentab(tabname) {
+        var i;
+        var x = document.getElementsByClassName("tab-contents");
+        var y = document.getElementsByClassName("tab-links");
+        for (i = 0; i < x.length; i++) {
+            x[i].classList.remove("active-tab");
+        }
+        for (i = 0; i < y.length; i++) {
+            y[i].classList.remove("active-link");
+        }
+        document.getElementById(tabname).classList.add("active-tab");
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
 
 <!-- ----------portfolio------------ -->
 <body>
@@ -123,7 +142,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                        <td>COhive</td>
+                        <td>Developed an innovative Desk Management System for the Student Innovation Centre at the University of Alberta. Utilizing React for the front-end and Django for the back-end, successfully deployed the system via Cybera. This project was awarded a grant of 5000 CAD in prize money, recognizing its potential to streamline and enhance workspace management for students.</td>
+                        <td><a href="https://hip-yak-solely.ngrok-free.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Website</a></td>
+                    </tr>
                         <td>BARQR</td>
                         <td>An innovative Android application engineered to effortlessly scan QR codes, dispensing randomized points, and stimulating global competitiveness as users collect points by scanning QR codes displayed on an interactive map. This dynamic app offers an engaging and interactive experience, encouraging users to interact with their friends and competitors worldwide while exploring various geographical locations.</td>
                         <td><a href="https://github.com/Kannan-Khosla/BARQR" target="_blank"><i class="fas fa-external-link-alt"></i> GitHub</a></td>
@@ -186,7 +208,7 @@
                     <a href="https://www.instagram.com/kannan_khosla/"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/kannan-khosla-4b8168222/"><i class="fab fa-linkedin"></i></a>
                 </div>
-                <a href="images/my_cv.pdf" download class="btn btn2">Download CV</a>
+                <a href="images/cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
